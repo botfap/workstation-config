@@ -126,8 +126,10 @@ rm wget http://download3.vmware.com/software/wkst/file/VMware-Workstation-Full-1
 #### 2.5. Install & License SSHCRT
 
 ```
-wget 
-sudo dpkg -i sshcrt.deb
+wget https://raw.githubusercontent.com/botfap/workstation-config/master/pkgs/sshcrt.txz
+tar -xf sshcrt.txz
+sudo dpkg -i sshcrt/*.deb
+sudo sshcrt/sshcrt.pl /usr/bin/Sec*
 sudo apt -f install
 rm
 ```
